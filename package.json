@@ -9,6 +9,7 @@
   "author": "yumii.saiko <yumii.saiko@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "node": "^16.17.1",
     "peer": "^1.0.0"
   },
   "devDependencies": {
