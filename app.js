@@ -14,4 +14,5 @@ function onStartServer() {
   console.log(`Peer server running at http://localhost:${port}${endpoint}`);
 }
 
+server.use(require('cors')());
 server.listen(onStartServer);
