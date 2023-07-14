@@ -1,0 +1,17 @@
+{
+  "name": "peer-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app.js"
+  },
+  "author": "yumii.saiko <yumii.saiko@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "peer": "^1.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
