@@ -2,17 +2,19 @@ const { PeerServer } = require('peer');
 
 require('dotenv').config();
 
-const endpoint = process.env.ENDPOINT ?? '/peer';
-const port = process.env.PORT ?? 8092;
+const path = process.env.PATH || "/peer";
+const port = process.env.PORT || 8080;
 
 const server = new PeerServer({
-  path: endpoint,
+  path,
   port
 });
 
 function onStartServer() {
-  console.log(`Peer server running at http://localhost:${port}${endpoint}`);
+  console.log(`Peer server running at http://localhost:${port}/${path}`);
 }
 
-server.use(require('cors')());
+server.use(require('cors')({
+  origin: "*"
+}));
 server.listen(onStartServer);
